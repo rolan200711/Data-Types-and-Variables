@@ -1,0 +1,17 @@
+public class Practice1 {
+    public static void main(String[] args) {
+      
+    int quantity = 3;
+    double price = 19.99;
+    String store = "Rene Store";
+
+    double cost = quantity * price;
+            
+     System.out.println("     Receipt     ");
+     System.out.println("Store: " + store);
+     System.out.println("Quantity: " + quantity);
+     System.out.printf("Price: $%.2f%n",price);
+     System.out.printf("Total:   $%.2f%n", cost);
+         
+    }
+}
