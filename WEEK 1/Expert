@@ -1,1 +1,43 @@
+public class Practice2 {
+    public static void main(String[] args) {
+         
+        byte small = 127;   // the biggest value a byte can hold
+        small++;            // add 1
+        // A byte only goes up to 127. When it goes past that, it wraps
+        // around to the lowest value, -128, like an odometer resetting.
+        System.out.println("byte 127 + 1 = " + small);   // -128
+
+        String a = new String("hello");  // a new object
+        String b = new String("hello");  // another new object
+        String c = "hello";              // a literal
+
+        // a == b -> false
+        // They are two different objects, even though the text is the same.
+        System.out.println("a == b      : " + (a == b));
+        System.out.println("a.equals(b) : " + a.equals(b));
+
+        // a == c -> false
+        // a is a new object, c is a literal. They are not the same object.
+        System.out.println("a == c      : " + (a == c));
+        System.out.println("a.equals(c) : " + a.equals(c));
+
+        // b == c -> false
+        // b is a new object, c is a literal. They are not the same object.
+        System.out.println("b == c      : " + (b == c));
+        System.out.println("b.equals(c) : " + b.equals(c));
+
+        // Remember: == checks if they are the SAME object.
+        // .equals() checks if they have the SAME text.
+
+        int[] first = {1, 2, 3};
+        int[] second = first;   // one array, two names
+
+        second[0] = 99;         // changed through second
+        // Both variables point to the same array, so the change
+        // shows up when we read it through first too.
+        System.out.println("first[0]  = " + first[0]);    // 99
+        System.out.println("second[0] = " + second[0]);   // 99
+        System.out.println("first == second : " + (first == second)); // true
+    }
+}
 
